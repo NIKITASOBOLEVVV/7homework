@@ -13,6 +13,27 @@ for (int i=0; i< m; i++)
     }
     Console.WriteLine();
 }*/
+//
+void FillArray(double [,] matr)
+{
+for (int i=0; i <matr.GetLength(0); i++)
+{
+    for (int j=0; j < matr.GetLength(1); j++)
+    {
+        matr[i,j] = new Random().Next(0,10);
+    }
+   }
+}
+double [,]matrix = new double[3,3];
+FillArray(matrix);
+for (int i=0; i <matrix.GetLength(0); i++)
+{
+    for (int j=0; j <matrix.GetLength(1); j++)
+    {
+        Console.Write($"{matrix[i,j]} ");
+    }
+     Console.WriteLine();
+}
 
 //Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
 //и возвращает значение этого элемента или же указание, что такого элемента нет. 
@@ -52,7 +73,7 @@ else
 
 //Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
-void FillArray(int[,] matr)
+/*void FillArray(int[,] matr)
 {
 for (int i=0; i <matr.GetLength(0); i++)
 {
@@ -87,5 +108,5 @@ for(int j=0, k=0; j<n; j++)
 sum[k] = Math.Abs(Summ/m);
 Console.Write($"{sum[k]} ");
 k++;
-}
+}*/
 
